@@ -65,18 +65,7 @@
   });
     
     map.setZoom(4);
-    $.getJSON("places.geojson",function(data){
-      var locations = data.features.map(function(rat) {
-        // the heatmap plugin wants an array of each location
-        var location = rat.geometry.coordinates.reverse();
-        location.push(0.5);
-        return location; // e.g. [50.5, 30.5, 1.0], // lat, lng, intensity
-      });
-
-      var heat = L.heatLayer
-      (locations, max = 1.0, { radius: 25 });
-      map.addLayer(heat);
-    });
+    
 
   </script>
 </body>
