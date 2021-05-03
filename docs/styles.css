@@ -1,0 +1,85 @@
+ul {
+ list-style-type: none;
+ margin: 1px;
+ padding: 1px;
+ overflow: hidden;
+ background-color: #d8c3a5;
+}
+
+li {
+ float: left;
+ border-right: 2px solid black;
+}
+
+/* Add a border to all( but not the last) list items */
+li:last-child {
+ border-right: none;
+}
+
+li a {
+ display: block;
+ color: black;
+ text-align: left;
+ padding: 15px 17px;
+ text-decoration: none;
+}
+
+/* Links will change color when hovered over */
+li a:hover {
+ background-color: #8e8d8a;
+}
+
+.active {
+ background-color: #8e8d8a;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EAE7DC;
+  font-family:"apercu",sans-serif
+}
+
+h2,
+h3 {
+  margin: 10px;
+  font-size: 1.2em;
+  color: #E85A4F;
+}
+
+h3 {
+  font-size: 1em;
+  color: #E85A4F;
+}
+
+p {
+  font-size: 0.85em;
+  margin: 10px;
+  text-align: left;
+  color: #E98074;
+}
+
+/**
+* Create a position for the map
+* on the page */
+#map {
+  position: absolute;
+  top: 200px;
+  bottom: 0;
+  width: 100%;
+}
+
+/**
+* Set rules for how the map overlays
+* (information box and legend) will be displayed
+* on the page. */
+.map-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  margin-right: 20px;
+  font-family:"apercu",sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+}
