@@ -57,7 +57,8 @@
         return location; // e.g. [50.5, 30.5, 1.0], // lat, lng, intensity
       });
 
-      var heat = L.heatLayer(locations, { radius: 35 });
+      var heat = L.heatLayer
+      (locations, max = 1.0, { radius: 25 });
       map.addLayer(heat);
     });
 
