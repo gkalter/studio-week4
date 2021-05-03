@@ -52,7 +52,7 @@
   $.getJSON("places.geojson",function(data){
     var ratIcon = L.icon({
       iconUrl: 'http://maptimeboston.github.io/leaflet-intro/rat.gif',
-      iconSize: [250,200]
+      iconSize: [100,80]
     });
     L.geoJson(data,{
       pointToLayer: function(feature,latlng){
