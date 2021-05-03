@@ -59,7 +59,7 @@
         return location; // e.g. [50.5, 30.5, 0.2], // lat, lng, intensity
       });
 
-  var heat = L.heatLayer(locations, { radius: 35, gradient: {0.4: '#0091ad', 1: '#b7094c'}});
+  var heat = L.heatLayer(locations, { radius: 25, gradient: {0.4: '#0091ad', 1: '#b7094c'}});
       map.addLayer(heat);
     });
 
