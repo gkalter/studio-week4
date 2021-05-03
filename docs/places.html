@@ -28,7 +28,7 @@
 	  <h1>Studio Week 4 <br> Garren's Rat Race Around the World </h1>
 	  <p> I brought back the geojson file from Studio 1! Given my smallest in the grand scheme of things and my relative amounts of global 
 		  travel, I, like the rat, have prolifically spread around the world. I plan to add to this quirky little map as I resume traveling and I found this offered a better 
-		  "heat map" than the java script package due to the relative scale and how the file was stored.</p>
+		  "heat map" than the java script package due to the relative scale and how the geojson file was stored.</p>
   <!-- Add multiple pages to web page-->
   <!-- active class displays the grey box around current page-->
   <ul>
@@ -65,17 +65,7 @@
   });
     
     map.setZoom(4);
-    $.getJSON("places.geojson",function(data){
-      var locations = data.features.map(function(rat) {
-        // the heatmap plugin wants an array of each location
-        var location = rat.geometry.coordinates.reverse();
-        location.push(0.5);
-        return location; // e.g. [50.5, 30.5, 0.2], // lat, lng, intensity
-      });
 
-  var heat = L.heatLayer(locations, { radius: 25, gradient: {0.4: '#0091ad', 0.7: '#5c4d7d', 1: '#b7094c'}});
-      map.addLayer(heat);
-    });
     
 
   </script>
